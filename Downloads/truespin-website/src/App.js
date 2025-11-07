@@ -41,7 +41,6 @@ export default function TrueSpinWebsite() {
     { id: 'home', label: 'Home' },
     { id: 'technology', label: 'Technology' },
     { id: 'applications', label: 'Applications' },
-    { id: 'business', label: 'Business' },
     { id: 'team', label: 'Team' }
   ];
 
@@ -104,7 +103,6 @@ export default function TrueSpinWebsite() {
       {currentPage === 'home' && <HomePage navigateTo={navigateTo} scrollToSection={scrollToSection} visibleSections={visibleSections} />}
       {currentPage === 'technology' && <TechnologyPage />}
       {currentPage === 'applications' && <ApplicationsPage />}
-      {currentPage === 'business' && <BusinessPage />}
       {currentPage === 'team' && <TeamPage />}
 
       {/* Footer */}
@@ -641,189 +639,6 @@ function ApplicationsPage() {
                 <li>• Drone racing leagues and competitions</li>
                 <li>• Small commercial drone service providers</li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// BUSINESS PAGE
-function BusinessPage() {
-  return (
-    <div className="pt-24 pb-20 bg-slate-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-slate-900 mb-4">Business Model</h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Multiple revenue streams ensure sustainable growth and customer value
-          </p>
-        </div>
-
-        {/* Revenue Streams */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white rounded-xl p-8 shadow-lg">
-            <div className="w-14 h-14 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-              <DollarSign size={28} className="text-white" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Hardware Sales</h3>
-            <p className="text-slate-700 mb-4">
-              One-time purchase of TrueSpin calibration device with all necessary hardware and basic software included.
-            </p>
-            <div className="bg-cyan-50 rounded-lg p-4">
-              <p className="text-sm text-slate-700"><strong>Target Price:</strong> $800-1,200 per unit</p>
-              <p className="text-sm text-slate-600 mt-2">Competitive with professional lab services after just 3-5 uses</p>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl p-8 shadow-lg">
-            <div className="w-14 h-14 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-              <Zap size={28} className="text-white" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Calibration Services</h3>
-            <p className="text-slate-700 mb-4">
-              For customers who don't want to purchase hardware, we offer mail-in calibration services with quick turnaround.
-            </p>
-            <div className="bg-blue-50 rounded-lg p-4">
-              <p className="text-sm text-slate-700"><strong>Service Fee:</strong> $50-100 per IMU</p>
-              <p className="text-sm text-slate-600 mt-2">48-hour turnaround with calibration certificate</p>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl p-8 shadow-lg">
-            <div className="w-14 h-14 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-              <TrendingUp size={28} className="text-white" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Cloud Subscription</h3>
-            <p className="text-slate-700 mb-4">
-              Premium cloud features including calibration history tracking, multi-device management, and advanced analytics.
-            </p>
-            <div className="bg-purple-50 rounded-lg p-4">
-              <p className="text-sm text-slate-700"><strong>Subscription:</strong> $10-20/month</p>
-              <p className="text-sm text-slate-600 mt-2">Free tier available with basic features</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Additional Revenue Opportunities */}
-        <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 md:p-12 text-white mb-12">
-          <h2 className="text-3xl font-bold mb-8">Future Revenue Opportunities</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-3 text-cyan-400">B2B Licensing</h3>
-              <p className="text-slate-300 mb-4">
-                License TrueSpin technology to drone manufacturers for integration into their production lines and customer support infrastructure.
-              </p>
-              <p className="text-sm text-cyan-200">Potential for significant recurring revenue</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-3 text-cyan-400">Enterprise Solutions</h3>
-              <p className="text-slate-300 mb-4">
-                Custom calibration solutions for large commercial fleets with centralized management, fleet-wide analytics, and white-label options.
-              </p>
-              <p className="text-sm text-cyan-200">Higher margins with enterprise support contracts</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Cost Structure */}
-        <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Cost Structure</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Initial Development Costs</h3>
-              <ul className="space-y-3 text-slate-700">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong>Research & Design:</strong> Prototype development, testing, and iteration
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong>Hardware Components:</strong> Motors, encoders, microcontrollers, mechanical parts
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong>Software Development:</strong> Calibration algorithms, cloud platform, user interface
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">Ongoing Operational Costs</h3>
-              <ul className="space-y-3 text-slate-700">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong>Manufacturing:</strong> Unit production costs decrease with scale
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong>Cloud Infrastructure:</strong> Server hosting, data storage, bandwidth
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <strong>Marketing & Sales:</strong> Digital marketing, partnerships, trade shows
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Market Strategy */}
-        <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-8 md:p-12 text-white mb-12">
-          <h2 className="text-3xl font-bold mb-6">Go-to-Market Strategy</h2>
-          <p className="text-cyan-50 mb-8 text-lg">
-            We'll reach customers through targeted channels that reach technically sophisticated drone operators and researchers.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h4 className="font-bold mb-2">Direct Sales</h4>
-              <p className="text-cyan-50 text-sm">Online store with educational content and demo videos</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h4 className="font-bold mb-2">University Partnerships</h4>
-              <p className="text-cyan-50 text-sm">Collaborate with robotics labs and provide educational discounts</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h4 className="font-bold mb-2">Industry Events</h4>
-              <p className="text-cyan-50 text-sm">Demo at drone expos, robotics conferences, and maker faires</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h4 className="font-bold mb-2">B2B Channels</h4>
-              <p className="text-cyan-50 text-sm">Partner with drone manufacturers and service providers</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Competitive Advantage */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">Sustainable Competitive Advantage</h2>
-          <p className="text-slate-700 mb-6">
-            TrueSpin's unique combination of hardware design, calibration methodology, and cloud integration creates multiple barriers to competition:
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="border-l-4 border-cyan-500 pl-4">
-              <h4 className="font-bold text-slate-900 mb-2">Proprietary Technology</h4>
-              <p className="text-slate-700 text-sm">Patentable dual-method calibration approach combining turntable and reaction wheel verification</p>
-            </div>
-            <div className="border-l-4 border-blue-500 pl-4">
-              <h4 className="font-bold text-slate-900 mb-2">Network Effects</h4>
-              <p className="text-slate-700 text-sm">Cloud platform creates value through calibration history and community knowledge sharing</p>
-            </div>
-            <div className="border-l-4 border-purple-500 pl-4">
-              <h4 className="font-bold text-slate-900 mb-2">First-Mover Advantage</h4>
-              <p className="text-slate-700 text-sm">Early partnerships and brand recognition in a nascent market segment</p>
             </div>
           </div>
         </div>
